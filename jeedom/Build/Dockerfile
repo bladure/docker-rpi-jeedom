@@ -37,7 +37,7 @@ RUN echo "www-data ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
 # Ajout des fichiers Jeedom
 RUN mkdir -p /var/www/html && \
  rm -rf /root/core-* && \
- wget https://github.com/jeedom/core/archive/stable.zip -O /tmp/jeedom.zip && \
+ wget https://github.com/jeedom/core/archive/stablev3.zip -O /tmp/jeedom.zip && \
  unzip -q /tmp/jeedom.zip -d /root/ && \
  cp -R /root/core-*/* /var/www/html/ && \
  cp -R /root/core-*/.htaccess /var/www/html/
